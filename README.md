@@ -12,7 +12,7 @@ The pre-deployment script below negates any pre-work required by automatically c
 
 1. **Copy** the PowerShell code snippet below.
 ```powershell
-$uri = "https://raw.githubusercontent.com/tayganr/purviewdemo/main/scripts/preDeploymentScript.ps1"
+$uri = "https://raw.githubusercontent.com/k14i/purviewdemo/main/scripts/preDeploymentScript.ps1"
 Invoke-WebRequest $uri -OutFile "preDeploymentScript.ps1"
 ./preDeploymentScript.ps1
   ```
