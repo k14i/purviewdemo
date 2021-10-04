@@ -398,5 +398,5 @@ Invoke-AzDataFactoryV2Pipeline -ResourceGroupName $resource_group -DataFactoryNa
 
 # 14. Populate Glossary
 $glossaryGuid = (createGlossary $token).guid
-$glossaryTermsTemplateUri = 'https://raw.githubusercontent.com/k14i/purviewlab/main/assets/import-terms-sample.csv'
+$glossaryTermsTemplateUri = 'https://raw.githubusercontent.com/tayganr/purviewlab/main/assets/import-terms-sample.csv'
 importGlossaryTerms $token $glossaryGuid $glossaryTermsTemplateUri
