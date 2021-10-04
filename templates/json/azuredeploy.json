@@ -520,7 +520,7 @@
       "properties": {
         "azPowerShellVersion": "3.0",
         "arguments": "[format('-tenant_id {0} -user_id {1} -client_id {2} -client_secret {3} -purview_account {4} -vault_uri {5} -admin_login {6} -sql_secret_name {7} -subscription_id {8} -resource_group {9} -location {10} -sql_server_name {11} -sql_db_name {12} -storage_account_name {13} -adf_name {14} -adf_principal_id {15} -adf_pipeline_name {16} -managed_identity {17}', variables('tenantId'), parameters('azureActiveDirectoryObjectID'), parameters('servicePrincipalClientID'), parameters('servicePrincipalClientSecret'), format('pvdemo{0}-pv', parameters('suffix')), reference(resourceId('Microsoft.KeyVault/vaults', format('pvdemo{0}-keyvault', parameters('suffix')))).vaultUri, parameters('sqlServerAdminLogin'), variables('sqlSecretName'), variables('subscriptionId'), variables('rg'), variables('location'), format('pvdemo{0}-sqlsvr', parameters('suffix')), format('pvdemo{0}-sqldb', parameters('suffix')), format('pvdemo{0}adls', parameters('suffix')), format('pvdemo{0}-adf', parameters('suffix')), reference(resourceId('Microsoft.DataFactory/factories', format('pvdemo{0}-adf', parameters('suffix'))), '2018-06-01', 'full').identity.principalId, 'copyPipeline', reference(resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', 'configDeployer')).principalId)]",
-        "primaryScriptUri": "https://raw.githubusercontent.com/tayganr/purviewdemo/main/scripts/postDeploymentScript.ps1",
+        "primaryScriptUri": "https://raw.githubusercontent.com/k14i/purviewdemo/main/scripts/postDeploymentScript.ps1",
         "forceUpdateTag": "[guid(resourceGroup().id)]",
         "retentionInterval": "PT4H"
       },
