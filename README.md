@@ -1,4 +1,4 @@
-# Azure Purview Demo Environment
+# Azure Purview Demo Environment (for Japanese Users)
 This repository includes instructions on how to automate the deployment of a pre-populated Azure Purview demo environment.
 
 ## Prerequisites

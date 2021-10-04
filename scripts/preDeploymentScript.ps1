@@ -10,7 +10,7 @@ function getUserPrincipalId() {
 }
 
 function selectLocation() {
-    $locationList='australiaeast', 'brazilsouth', 'canadacentral', 'centralindia', 'eastus', 'eastus2', 'southcentralus', 'southeastasia', 'uksouth', 'westeurope'
+    $locationList='westus2'
     $location = Get-Random -InputObject $locationList
     Return $location
 }
@@ -78,9 +78,11 @@ $subscriptionId = (Get-AzContext).Subscription.Id
 $principalId = getUserPrincipalId
 $suffix = -join ((48..57) + (97..122) | Get-Random -Count 5 | ForEach-Object {[char]$_})
 $location = selectLocation
+$date = Get-Date
+$date = $date.AddHours(+9).ToString("yyyyMMddHHmm")
 
 # Create Resource Group
-$resourceGroup = New-AzResourceGroup -Name "pvdemo-rg-${suffix}" -Location $location
+$resourceGroup = New-AzResourceGroup -Name "${date}-pvdemo-rg-${suffix}" -Location $location
 $resourceGroupName = $resourceGroup.ResourceGroupName
 
 # Create Service Principal
